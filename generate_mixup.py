@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw
 from utils.random_data import get_random_data, get_random_data_with_MixUp
 from utils.utils import convert_annotation, get_classes
 
+# <<<<<<< HEAD
 # -----------------------------------------------------------------------------------#
 #   Origin_VOCdevkit_path   原始数据集所在的路径
 #   Out_VOCdevkit_path      输出数据集所在的路径
@@ -19,6 +20,20 @@ Out_VOCdevkit_path = "VOCdevkit"
 # -----------------------------------------------------------------------------------#
 Out_Num = 100
 input_shape = [640, 640]
+# =======
+#-----------------------------------------------------------------------------------#
+#   Origin_VOCdevkit_path   原始数据集所在的路径
+#   Out_VOCdevkit_path      输出数据集所在的路径
+#-----------------------------------------------------------------------------------#
+# Origin_VOCdevkit_path   = "VOCdevkit_Origin"
+# Out_VOCdevkit_path      = "VOCdevkit"
+#-----------------------------------------------------------------------------------#
+#   Out_Num                 利用mixup生成多少组图片
+#   input_shape             生成的图片大小
+#-----------------------------------------------------------------------------------#
+Out_Num                 = 100
+input_shape             = [640, 640]
+# >>>>>>> e0feeb05922756fc4d9b23681f65a820ba548903
 
 # -----------------------------------------------------------------------------------#
 #   下面定义了xml里面的组成模块，无需改动。
@@ -120,5 +135,5 @@ if __name__ == "__main__":
         img = Image.fromarray(image_data.astype(np.uint8))
         img.save(os.path.join(Out_JPEGImages_path, str(index) + '.jpg'))
         write_xml(os.path.join(Out_Annotations_path, str(index) + '.xml'),
-                  os.path.join(Out_JPEGImages_path, str(index) + '.jpg'), \
+                  os.path.join(Out_JPEGImages_path, str(index) + '.jpg'),
                   headstr, input_shape, box_data, unique_labels, tailstr)

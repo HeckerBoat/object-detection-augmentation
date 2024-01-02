@@ -7,6 +7,7 @@ from PIL import Image, ImageDraw
 from utils.random_data import get_random_data, get_random_data_with_Mosaic
 from utils.utils import convert_annotation, get_classes
 
+# <<<<<<< HEAD
 # -----------------------------------------------------------------------------------#
 #   Origin_VOCdevkit_path   原始数据集所在的路径
 #   Out_VOCdevkit_path      输出数据集所在的路径
@@ -14,6 +15,15 @@ from utils.utils import convert_annotation, get_classes
 Origin_VOCdevkit_path = "VOCdevkit_Origin"
 Out_VOCdevkit_path = "VOCdevkit"
 # -----------------------------------------------------------------------------------#
+# =======
+#-----------------------------------------------------------------------------------#
+  # Origin_VOCdevkit_path   原始数据集所在的路径
+  # Out_VOCdevkit_path      输出数据集所在的路径
+#-----------------------------------------------------------------------------------#
+# Origin_VOCdevkit_path   = "VOCdevkit_Origin"
+# Out_VOCdevkit_path      = "VOCdevkit"
+#-----------------------------------------------------------------------------------#
+# >>>>>>> e0feeb05922756fc4d9b23681f65a820ba548903
 #   Out_Num                 利用mosaic生成多少组图片
 #   input_shape             生成的图片大小
 # -----------------------------------------------------------------------------------#
